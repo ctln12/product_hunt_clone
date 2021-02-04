@@ -1,0 +1,16 @@
+<div class="container">
+  <h1 class="my-4">Awesome Products</h1>
+  <div class="row">
+    <% @products.each do |product| %>
+      <div class="col-6">
+        <div class="card-product mb-3">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="card-product-infos">
+            <h2><%= product.name %></h2>
+            <p><%= product.tagline %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
