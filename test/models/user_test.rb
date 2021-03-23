@@ -5,4 +5,9 @@ class UserTest < ActiveSupport::TestCase
     user = User.new(first_name: "john", last_name: "lennon")
     assert_equal "John Lennon", user.full_name
   end
+
+  test "initials returns the capitalized first letters of the first name and last name" do
+    user = User.new(first_name: "john", last_name: "lennon")
+    assert_equal "JL", user.initials
+  end
 end
